@@ -1,11 +1,17 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
+:root {
+  /*font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/
+  /*line-height: 1.5;*/
+  /*font-weight: 400;*/
+
+  //color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  //background-color: #071426;
+  //background-color: #0b213f;
+  background-color: #fff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,3 +19,99 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+/* .panelImage {
+  border-radius: 15px;
+}
+@media screen and (max-width: 660px) {
+  .panelImage {
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 661px) {
+  .panelImage {
+    object-fit: cover;
+    object-position: center;
+    height: 530px;
+  }
+} */
+.panelBackground {
+  background-image: url("https://c1.wallpaperflare.com/preview/592/936/918/animals-dogs-cat-play.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.menu {
+  /* z-index: 2; */
+  position: sticky; 
+  margin-top: 45px;
+  left: 45px;
+  cursor: pointer;
+}
+
+/* .menu:hover {
+  cursor: pointer;
+} */
+
+.panelList {
+  cursor: pointer;
+  line-height: 2;
+  font-family: cursive;
+  color: #0b213f;
+}
+
+.panelList li:hover {
+  color: #a5b4fc;
+  //color: #183462;
+}
+
+/* @media screen and (min-width: 1274px) {
+ .menu {
+  7%;
+ } 
+}
+
+@media screen and (min-width: 1388px) {
+ .menu {
+  left: 100px;
+ } 
+}
+@media screen and (min-width: 1395px) {
+ .menu {
+  left: 120px;
+ } 
+}
+
+@media screen and (min-width: 1447px) {
+ .menu {
+  left: 150px;
+ } 
+}
+
+@media screen and (min-width: 1495px) {
+ .menu {
+  left: 180px;
+ } 
+}
+
+@media screen and (min-width: 1560px) {
+ .menu {
+  left: 200px;
+ } 
+}
+
+@media screen and (min-width: 1600px) {
+ .menu {
+  left: 210px;
+ } 
+}
+
+@media screen and (min-width: 1625px) {
+ .menu {
+  left: 18%;
+ } 
+} */
