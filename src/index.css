@@ -69,6 +69,18 @@
   //color: #183462;
 }
 
+.mapImageContainer {
+  overflow: hidden;
+  border-left: solid black 1px;
+  border-right: solid black 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.mapImage:hover {
+  transition: transform 0.3s;
+  transform: scale(1.5);
+}
+
 /* @media screen and (min-width: 1274px) {
  .menu {
   7%;

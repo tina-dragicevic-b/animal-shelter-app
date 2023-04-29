@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Sidebar } from 'primereact/sidebar';
 import { InputSwitch } from 'primereact/inputswitch';
- 
+import { NavLink } from 'react-router-dom';
 const Panel = () => {
 
     // const [openMenu, setOpenMenu] = useState(false);
@@ -11,13 +11,15 @@ const Panel = () => {
       <div className="panelBackground">
          <Sidebar visible={visible} onHide={() => setVisible(false)} className="w-full md:w-20rem lg:w-30rem">
                 <h2 style={{fontSize: "20px", fontFamily: "fantasy", marginBottom: "20px"}}>We love animals!</h2>
+                <nav>
                 <ul className="panelList">
-                    <li>About us</li>
-                    <li>List of animals</li>
+                    <li><NavLink to="/">About us</NavLink></li>
+                    <li><NavLink to="/animals">List of animals</NavLink></li>
                     <li>Donations</li>
                     <li>News</li>
                     <li>Create new</li>
                 </ul>
+                </nav>
             </Sidebar>
         {/* SLIKA */}
         <div>
