@@ -81,6 +81,11 @@
   transform: scale(1.5);
 }
 
+
+.contactFormInput {
+  border: solid #0b213f 0.2px;
+  margin-top: 20px;
+}
 /* @media screen and (min-width: 1274px) {
  .menu {
   7%;
