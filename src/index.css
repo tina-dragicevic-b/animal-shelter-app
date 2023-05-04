@@ -43,6 +43,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  margin-bottom: 30px;
 }
 
 .menu {
@@ -86,6 +87,28 @@
   border: solid #0b213f 0.2px;
   margin-top: 20px;
 }
+
+@media screen and (max-width: 920px) {
+  .animalsGrid {
+    /* display: flex;
+    flex-direction: column; */
+    display: none;
+    /* grid-template-columns: 900px */
+  }
+}
+
+.animalImage {
+  overflow: hidden;
+  background-position: center;
+  /* box-shadow: 8px 10px 5px #888888; */
+}
+.animalImage:hover {
+  overflow: hidden;
+  transition: transform 0.3s;
+  transform: scale(1.05);
+}
+
+
 /* @media screen and (min-width: 1274px) {
  .menu {
   7%;
