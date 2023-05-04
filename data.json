@@ -1,13 +1,79 @@
 {
   "comments": [
     {
-      "id": 1,
-      "body": "some comment"
-    },
-    {
       "email": "first@gmail.com",
       "comment": "Some lovely comment",
       "id": 2
+    },
+    {
+      "email": "novi@gmail.com",
+      "comment": "Best animal shelter EVER!!",
+      "id": 3
+    },
+    {
+      "email": "second@gmail.com",
+      "comment": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.",
+      "id": 4
+    },
+    {
+      "email": "a@mail.net",
+      "comment": "Posting new comment!!!",
+      "id": 5
     }
+  ],
+  "animals": [
+    {
+      "name": "Odie",
+      "type": "Dog",
+      "adopted": false,
+      "age": 3,
+      "description": "Adorable little budy. ",
+      "image": "https://c4.wallpaperflare.com/wallpaper/567/384/978/animals-dog-puppies-wallpaper-preview.jpg",
+      "id": 1
+    },
+    {
+      "name": "Ivana",
+      "type": "Cat",
+      "adopted": true,
+      "age": 3,
+      "description": "Koza kravlja. ",
+      "image": "https://c4.wallpaperflare.com/wallpaper/288/916/867/cat-animals-wallpaper-preview.jpg",
+      "id": 2
+    },
+    {
+      "name": "Gospon Zadro",
+      "type": "Cat",
+      "adopted": true,
+      "age": 3,
+      "description": "Adorable little cat. ",
+      "image": "https://c4.wallpaperflare.com/wallpaper/181/179/710/cat-mammal-dandelion-flower-wallpaper-preview.jpg",
+      "id": 3
+    },
+    {
+      "name": "Bina",
+      "type": "Dog",
+      "adopted": false,
+      "age": 3,
+      "description": "Teethless grandma. ",
+      "image": "https://c4.wallpaperflare.com/wallpaper/304/407/731/courage-the-cowardly-dog-cartoon-network-cartoon-dog-wallpaper-preview.jpg",
+      "id": 4
+    },
+    {
+      "name": "Julien and Maurice",
+      "type": "Parrot",
+      "adopted": true,
+      "age": "4m",
+      "description": "Male i brbljave. ",
+      "image": "https://c4.wallpaperflare.com/wallpaper/872/974/526/a-couple-parrots-2-birds-wallpaper-preview.jpg",
+      "id": 5
+    }
+  ],
+  "animalType": [
+    "Cat",
+    "Dog",
+    "Parrot",
+    "Bug",
+    "Turtoise",
+    "Budy"
   ]
 }
