@@ -5,23 +5,27 @@ import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { InputTextarea } from 'primereact/inputtextarea';
  
-const ContactForm = () => {
+const ContactForm = ({onNewComment}) => {
     const {
       register,
       handleSubmit,
+      reset,
       formState: { errors },
     } = useForm();
 
-    const [comments, setComments] = useState();
+    // const [comments, setComments] = useState();
     const onSubmit = (data) => {
-        postComment(data)
+        postComment(data).then(() => {
+          onNewComment(data);
+          reset();
+        });
     }
 
-    useEffect(() => {
-        getComments().then(response => {
-            setComments(() => [...response.data])
-        })
-    }, [])
+    // useEffect(() => {
+    //     getComments().then(response => {
+    //         setComments(() => [...response.data])
+    //     })
+    // }, [])
 
     return (
       <form onSubmit={handleSubmit(onSubmit)}>
