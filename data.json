@@ -66,6 +66,16 @@
       "description": "Male i brbljave. ",
       "image": "https://c4.wallpaperflare.com/wallpaper/872/974/526/a-couple-parrots-2-birds-wallpaper-preview.jpg",
       "id": 5
+    },
+    {
+      "name": "Petar",
+      "type": "Bird",
+      "age": "1",
+      "description": "",
+      "adopted": false,
+      "lastCheckup": "2023-05-29T22:00:00.000Z",
+      "image": "https://c4.wallpaperflare.com/wallpaper/952/1005/274/blue-river-beside-green-mountains-during-daytime-wallpaper-preview.jpg",
+      "id": 10
     }
   ],
   "animalType": [
@@ -74,6 +84,38 @@
     "Parrot",
     "Bug",
     "Turtoise",
-    "Budy"
+    "Budy",
+    "Bird"
+  ],
+  "donations": [
+    {
+      "id": 1,
+      "type": "Food",
+      "value": "10€",
+      "description": "Dry cat food with high fiber.",
+      "donated": false,
+      "userDonation": false
+    },{
+      "id": 2,
+      "type": "Food",
+      "value": "10€",
+      "description": "Dog snacks.",
+      "donated": false,
+      "userDonation": true
+    },{
+      "id": 3,
+      "type": "Toys",
+      "value": "5€",
+      "description": "Squeeky toys for dogs.",
+      "donated": true,
+      "userDonation": false
+    },{
+      "id": 4,
+      "type": "Blanket",
+      "value": "15€",
+      "description": "Warm winter blanket",
+      "donated": false,
+      "userDonation": false
+    }
   ]
 }

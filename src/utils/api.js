@@ -19,7 +19,16 @@ export const updateAnimal = async (animal) => {
     return await axios.put(`${url}/animals/${animal.id}`, animal)
 }
 
+export const createAnimal = async (animal) => {
+    return await axios.post(`${url}/animals`, {...animal})
+}
+
 // ANIMAL TYPE
 export const getTypes = async () => {
     return await axios.get(`${url}/animalType`)
+}
+
+// DONATIONS
+export const getDonations = async () => {
+    return await axios.get(`${url}/donations`)
 }
