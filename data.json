@@ -27,7 +27,7 @@
       "type": "Dog",
       "adopted": false,
       "age": 3,
-      "description": "Adorable little budy. ",
+      "description": "Adorable little budy. Loves mondays.",
       "image": "https://c4.wallpaperflare.com/wallpaper/567/384/978/animals-dog-puppies-wallpaper-preview.jpg",
       "id": 1
     },
@@ -66,6 +66,16 @@
       "description": "Male i brbljave. ",
       "image": "https://c4.wallpaperflare.com/wallpaper/872/974/526/a-couple-parrots-2-birds-wallpaper-preview.jpg",
       "id": 5
+    },
+    {
+      "name": "Petar",
+      "type": "Bird",
+      "age": "1",
+      "description": "",
+      "adopted": false,
+      "lastCheckup": "2023-05-29T22:00:00.000Z",
+      "image": "https://c4.wallpaperflare.com/wallpaper/952/1005/274/blue-river-beside-green-mountains-during-daytime-wallpaper-preview.jpg",
+      "id": 10
     }
   ],
   "animalType": [
@@ -74,6 +84,104 @@
     "Parrot",
     "Bug",
     "Turtoise",
-    "Budy"
+    "Budy",
+    "Bird"
+  ],
+  "donations": [
+    {
+      "id": 1,
+      "type": "Food",
+      "value": "10€",
+      "description": "Dry cat food with high fiber.",
+      "donated": false,
+      "userDonation": false
+    },
+    {
+      "id": 2,
+      "type": "Food",
+      "value": "10€",
+      "description": "Dog snacks.",
+      "donated": false,
+      "userDonation": true
+    },
+    {
+      "id": 3,
+      "type": "Toys",
+      "value": "5€",
+      "description": "Squeeky toys for dogs.",
+      "donated": true,
+      "userDonation": false
+    },
+    {
+      "id": 4,
+      "type": "Blanket",
+      "value": "15€",
+      "description": "Warm winter blanket",
+      "donated": true,
+      "userDonation": false
+    },
+    {
+      "type": "Medicine",
+      "value": "20€",
+      "description": "Opis za ljekove. ",
+      "donation": "",
+      "donated": true,
+      "userDonation": false,
+      "id": 6
+    },
+    {
+      "type": "Donation",
+      "value": "5€",
+      "description": "Other donation offer",
+      "donation": "",
+      "donated": false,
+      "userDonation": false,
+      "id": 7
+    }
+  ],
+  "newsImages": [
+    "https://c4.wallpaperflare.com/wallpaper/37/56/897/family-guy-brian-griffin-dog-wallpaper-preview.jpg",
+    "https://c0.wallpaperflare.com/preview/105/94/569/administration-articles-bank-black-and-white.jpg",
+    "https://c1.wallpaperflare.com/preview/344/602/383/flower-summer-garden-nature.jpg",
+    "https://c4.wallpaperflare.com/wallpaper/199/677/146/parrot-birds-animals-branch-wallpaper-preview.jpg",
+    "https://c1.wallpaperflare.com/preview/219/34/345/tarantula-brachypelma-red-knee-poisonous-mexican-red-knee-poisonous.jpg",
+    "https://c4.wallpaperflare.com/wallpaper/41/681/303/pc-hd-1080p-nature-1920x1080-wallpaper-preview.jpg",
+    "https://c4.wallpaperflare.com/wallpaper/537/664/855/nature-water-mountains-trees-wallpaper-preview.jpg",
+    "https://c4.wallpaperflare.com/wallpaper/725/204/24/parrots-couple-love-wallpaper-preview.jpg",
+    "https://c4.wallpaperflare.com/wallpaper/720/638/478/cute-owl-wallpaper-thumb.jpg"
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "Et quam sapiente 33 nesciunt",
+      "content": "Sit accusantium deleniti ut dolore pariatur At iure adipisci vel placeat recusandae id commodi animi. Hic quas laborum aut laboriosam corporis et incidunt alias hic dolor fuga aut dolor facere. Id deserunt ducimus non galisum totam et aspernatur voluptatem et velit maiores est rerum quas sed rerum ratione.",
+      "date": "5/1/2023, 2:35:50 PM",
+      "important": false,
+      "image": ""
+    },
+    {
+      "id": 2,
+      "title": "Et pariatur nesciunt",
+      "content": "Hic quas laborum aut laboriosam corporis et incidunt alias hic dolor fuga aut dolor facere. Id deserunt ducimus non galisum totam et aspernatur voluptatem et velit maiores est rerum quas sed rerum ratione. Et quam sapiente 33 nesciunt corporis eum internos placeat non distinctio possimus aut veritatis rerum est eligendi sint sit animi sint.",
+      "date": "5/1/2023, 2:40:50 PM",
+      "important": true,
+      "image": "https://c4.wallpaperflare.com/wallpaper/720/638/478/cute-owl-wallpaper-thumb.jpg"
+    },
+    {
+      "title": "Notification",
+      "content": "Qui tempora omnis est ipsam internos sed autem molestiae et sint omnis! Qui totam quaerat vel natus delectus ut reiciendis sunt.",
+      "image": "https://c1.wallpaperflare.com/preview/344/602/383/flower-summer-garden-nature.jpg",
+      "important": true,
+      "date": "5/4/2023, 2:35:50 PM",
+      "id": 3
+    },
+    {
+      "title": "New York Times",
+      "content": "Qui tempora omnis est ipsam internos sed autem molestiae et sint omnis! Qui tempora omnis est ipsam internos sed autem molestiae et sint omnis! Qui totam quaerat vel natus delectus ut reiciendis sunt. Qui totam quaerat vel natus delectus ut reiciendis sunt.",
+      "image": "",
+      "important": false,
+      "date": "5/8/2023, 4:35:50 PM",
+      "id": 4
+    }
   ]
 }
