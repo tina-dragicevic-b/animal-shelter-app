@@ -3,6 +3,8 @@ import {getComments} from "../utils/api";
 import { useState, useEffect } from "react";
 import { Panel } from 'primereact/panel';
  
+import { Fieldset } from 'primereact/fieldset';
+ 
 const About = () => {
   
   const [comments, setComments] = useState([]);
@@ -62,7 +64,16 @@ const About = () => {
           </div>
         </div>
         {comments?.length !== 0 && (
-          <Panel header="Comments" toggleable collapsed>
+          // <Panel header="Comments" toggleable >
+          //   {comments.map((comment) => (
+          //     <div key={comment.id} style={{marginBottom: "10px"}}>
+          //       <p style={{color: "#b38405", fontFamily: "cursive", fontSize: "12px"}}>by {comment.email}</p>
+          //       <p style={{color: "#0b213f", fontFamily: "cursive", marginLeft: "10px"}}>{comment.comment}</p>
+          //       <hr></hr>
+          //     </div>
+          //   ))}
+          // </Panel>
+          <Fieldset legend="Comments" toggleable>
             {comments.map((comment) => (
               <div key={comment.id} style={{marginBottom: "10px"}}>
                 <p style={{color: "#b38405", fontFamily: "cursive", fontSize: "12px"}}>by {comment.email}</p>
@@ -70,8 +81,10 @@ const About = () => {
                 <hr></hr>
               </div>
             ))}
-          </Panel>
+          </Fieldset>
         )}
+        <hr style={{border: "10px solid #a5b4fc", borderRadius: "3px"}}></hr>
+
       </div>
     );
 
