@@ -27,7 +27,7 @@ const Panel = () => {
                     <li><NavLink onClick={() => setVisible(false)} to="/">About us</NavLink></li>
                     <li><NavLink onClick={() => setVisible(false)} to="/animals">List of animals</NavLink></li>
                     <li><NavLink onClick={() => setVisible(false)} to="/donations">Donations</NavLink></li>
-                    <li>News</li>
+                    <li><NavLink onClick={() => setVisible(false)} to="/news">News</NavLink></li>
                     {isAdmin && <li><NavLink onClick={() => setVisible(false)} to="/newAnimal">Create new</NavLink></li>}
                 </ul>
                 </nav>

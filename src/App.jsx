@@ -7,6 +7,7 @@ import Animals from './components/Animals';
 import { UserContext } from './context/UserContext';
 import NewAnimalForm from './components/NewAnimalForm';
 import Donations from './components/Donations';
+import News from './components/News';
 function App() {
   const [user, setUser] = useState("User")
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/animals" element={<Animals />} />
           <Route path="/newAnimal" element={<NewAnimalForm />} />
           <Route path="/donations" element={<Donations />} />
+          <Route path="/news" element={<News />} />
         </Routes>
       </UserContext.Provider>
     </>
