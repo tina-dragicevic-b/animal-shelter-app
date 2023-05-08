@@ -43,7 +43,7 @@ const NewAnimalForm = () => {
         {user == "Admin" && (
           <div
             style={{
-              backgroundColor: "#faf4e6",
+              backgroundColor: "#fff",
             }}
           >
             <div
@@ -162,7 +162,7 @@ const NewAnimalForm = () => {
                   </div>
                 </div>
               </div>
-              <Button type="submit" style={{width: "100%"}} label="Submit" className="p-button p-component p-button-raised p-button-danger p-button-text" />
+              <Button type="submit" style={{width: "100%"}} label="Submit" className="p-button p-component p-button-raised p-button-help p-button-text" />
             </form>
           </div>
         )}

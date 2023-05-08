@@ -75,7 +75,6 @@ const Animals = () => {
     }
 
     const onFilterByAdoption = (e) => {
-      console.log(e)
       if(e.value === "Adopted"){
         setFilterByAdopted(e.checked);
         setFilterByNotAdopted(false);
@@ -97,27 +96,41 @@ const Animals = () => {
   }
 
     const onShowUpdatePopup = () => {
-    console.log(animalDetails)
-
-      // if(!isAnimalUpdate){
-      //   setAnimalDetailsCopy(animalDetails);
-      // }
-      // else if (isAnimalUpdate){
-      //   setAnimalDetails(animalDetailsCopy)
-      // }
-      // setAnimalDetailsCopy(animalDetails);
       setIsAnimalDetails(!isAnimalDetails);
       setIsAnimalUpdate(!isAnimalUpdate);
     }
-    console.log("tac", animalDetailsCopy)
-    const onSubmit = (data) => {
-      console.log(data)
-      updateAnimal(animalDetailsCopy).then((response) => console.log(response))
+    const onSubmit = () => {
+      updateAnimal(animalDetailsCopy).then((response) => {
+
+        setIsAnimalUpdate(false);
+        setIsAnimalDetails(false);
+        setShowPopup(false)
+        const updateState = _animals.map((animal) => {
+          if(animal.id === animalDetailsCopy.id){
+            return response.data
+          } else return animal
+        })
+        setAnimals([...updateState])
+      })
+    }
+
+    const onAdopt = () => {
+      animalDetails.adopted = true; 
+      const updateState = _animals.map((animal) => {
+        if(animal.id === animalDetails.id){
+          animal.adopted = true;
+          return animal
+        } else return animal
+      })
+      setAnimals([...updateState])
+      updateAnimal(animalDetails).then((response) => {
+        setIsAnimalDetails(false);
+        setShowPopup(false)
+      })
     }
 
     const onChangeHandler = (event) => {
       const { name, value } = event.target;
-      console.log(name, value)
       if(name === "adopted"){
         setAnimalDetailsCopy({...animalDetailsCopy, adopted: !animalDetailsCopy.adopted})
       }
@@ -180,7 +193,7 @@ const Animals = () => {
                   }}
                 >
                   {!animalDetails?.adopted && (
-                    <Button label="Adopt 💜 " className="p-button-success" />
+                    <Button label="Adopt 💜 " className="p-button-success" onClick={onAdopt} />
                   )}{" "}
                   {/* ovaj true se mijenja s isAdmin */}
                   {user === "Admin" && (
@@ -204,6 +217,7 @@ const Animals = () => {
                     value={animalDetailsCopy?.name}
                     name="name"
                     onChange={onChangeHandler}
+                    style={{width: "100%"}}
                   />
                   {/* <input
                     type="text"
@@ -212,7 +226,7 @@ const Animals = () => {
                     name="name"
                     onChange={onChangeHandler}
                   ></input> */}
-                  <div>
+                  <div style={{display: "flex", justifyContent: "space-between", marginTop: "10px", marginBottom: "20px"}}>
                     Adoption status:{" "}
                     {animalDetailsCopy?.adopted && <p>Adopted</p>}
                     {!animalDetailsCopy?.adopted && <p>Not adopted</p>}
@@ -228,6 +242,7 @@ const Animals = () => {
                       name="adopted"
                     />
                   </div>
+                  <div style={{display: "flex", justifyContent: "space-around"}}>
                   <Dropdown
                     {...register("type")}
                     name="type"
@@ -235,6 +250,7 @@ const Animals = () => {
                     options={_animalTypes}
                     value={animalDetailsCopy?.type}
                     onChange={onChangeHandler}
+                    style={{height: "50px", width: "49%"}}
                   />
                   <InputTextarea
                     rows={5}
@@ -245,7 +261,9 @@ const Animals = () => {
                     value={animalDetailsCopy?.description}
                     name="description"
                     onChange={onChangeHandler}
+                    style={{width: "50%"}}
                   />
+                  </div>
                   <div
                     style={{
                       display: "flex",
@@ -257,9 +275,9 @@ const Animals = () => {
                       type="cancle"
                       label="Cancle"
                       onClick={onShowUpdatePopup}
-                      className="mt-2"
+                      className="mt-2 p-button-help"
                     />
-                    <Button type="submit" label="Submit" className="mt-2" />
+                    <Button type="submit" label="Submit" className="mt-2 p-button-success" />
                   </div>
                 </form>
               </Card>
