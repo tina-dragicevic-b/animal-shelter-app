@@ -37,6 +37,8 @@
 } */
 .panelBackground {
   background-image: url("https://c1.wallpaperflare.com/preview/592/936/918/animals-dogs-cat-play.jpg");
+  /* background-image: url("https://c1.wallpaperflare.com/preview/28/306/494/animals-dogs-puppies-dog-kennel.jpg"); */
+  /* background-image: url("https://c0.wallpaperflare.com/preview/59/462/405/animals-dogs-cat-pets.jpg"); */
   background-color: #cccccc;
   height: 500px;
   background-position: center;
@@ -107,8 +109,6 @@
   transition: transform 0.3s;
   transform: scale(1.05);
 }
-
-
 /* @media screen and (min-width: 1274px) {
  .menu {
   7%;
