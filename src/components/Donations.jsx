@@ -61,10 +61,10 @@ const Donations = () => {
     group === "Looking for" ? updateArray(needed, setNeeded, donation) : updateArray(donated, setDonated, donation);
   }
 
-  const onCreateNew = async (isAdmin, newDonation) => {
-    console.log(isAdmin)
-    isAdmin ? setNeeded((prev) => [...prev, newDonation]) : setOffered((prev) => [...prev, newDonation]);
-    await createDonation(newDonation);
+  const onCreateNew = (isAdmin, newDonation) => {
+    createDonation(newDonation).then((response) => {
+      isAdmin ? setNeeded((prev) => [...prev, response.data]) : setOffered((prev) => [...prev, response.data]);
+    })
     setIsDonationForm(!isDonationForm)
   }
 

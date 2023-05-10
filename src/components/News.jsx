@@ -63,15 +63,12 @@ useEffect(() => {
 };
 
 const deleteRecord = async (id) => {
-    console.log(id)
     const newState = news.filter((n) => {
-        if (n.id !== id) {
+        if (n.id !== Number(id)) {
           return n;
         }
       });
-      console.log(newState)
-
-    setNews(() => [...news]);
+    setNews(() => [...newState]);
     await deleteNews(id);
 }
 
@@ -119,21 +116,21 @@ const confirm = (event) => {
           textAlign: "justify",
         }}
       >
-        {news?.map((n) => (
+        {news.length > 0 && news?.map((n) => (
           <Card
             key={n.id}
-            title={n.title}
-            subTitle={n.date}
-            header={header(n.image)}
-            footer={footer(n.id)}
+            title={n?.title}
+            subTitle={n?.date}
+            header={header(n?.image)}
+            footer={footer(n?.id)}
           >
-            {n.important && (
+            {n?.important && (
               <div>
                 <p style={{ color: "red" }}>IMPORTANT!</p>
                 <hr style={{ border: "solid 0.5px red" }}></hr>
               </div>
             )}
-            <p>{n.content}</p>
+            <p>{n?.content}</p>
           </Card>
         ))}
       </div>
