@@ -5,7 +5,6 @@ import { InputSwitch } from 'primereact/inputswitch';
 import { NavLink } from 'react-router-dom';
 const Panel = () => {
 
-    // const [openMenu, setOpenMenu] = useState(false);
     const [visible, setVisible] = useState(false);
     const [isAdmin, setIsAdmin] = useState(false);
     const {user, setUser} = useContext(UserContext);
@@ -32,7 +31,6 @@ const Panel = () => {
                 </ul>
                 </nav>
             </Sidebar>
-        {/* SLIKA */}
         <div>
             <div className="grid-container" style={{display: "grid", justifyContent: "space-between", padding: "15px"}}>
               <div onClick={() => setVisible(true)} style={{width: "30px", gridColumn: "1/2"}}>
@@ -49,12 +47,6 @@ const Panel = () => {
               <h1 style={{fontFamily: "fantasy", fontSize: "2rem"}}>ANIMAL SHELTER</h1>
               <h3 style={{fontFamily: "cursive", fontSize: "1.5rem"}}>Split, Croatia 🇭🇷  </h3>
             </div>
-          {/* <img
-            className="panelImage w-full h-96 "
-            src={
-              "https://c1.wallpaperflare.com/preview/592/936/918/animals-dogs-cat-play.jpg"
-            }
-          /> */}
         </div>
       </div>
     );

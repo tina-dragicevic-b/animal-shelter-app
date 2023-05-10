@@ -17,7 +17,6 @@ const NewsForm = ({createNews}) => {
 
   const onSubmit = (data) => {
     const date = new Date();
-    // console.log(date.toLocaleString())
     data.important = important;
     data.date = date.toLocaleString();
     createNews(data);

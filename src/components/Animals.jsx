@@ -137,7 +137,6 @@ const Animals = () => {
       setAnimalDetailsCopy({...animalDetailsCopy, [name]: value})
   }
     return (
-      // <div className='flex' style={{fontFamily: "cursive", color: "#0b213f", display: "flex", justifyContent: "space-between"}}>
       <div>
         <AnimasFilter
           setFilterByType={setFilterByType}
@@ -219,13 +218,6 @@ const Animals = () => {
                     onChange={onChangeHandler}
                     style={{width: "100%"}}
                   />
-                  {/* <input
-                    type="text"
-                    {...register("name")}
-                    value={animalDetailsCopy?.name}
-                    name="name"
-                    onChange={onChangeHandler}
-                  ></input> */}
                   <div style={{display: "flex", justifyContent: "space-between", marginTop: "10px", marginBottom: "20px"}}>
                     Adoption status:{" "}
                     {animalDetailsCopy?.adopted && <p>Adopted</p>}

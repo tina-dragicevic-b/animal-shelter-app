@@ -3,14 +3,7 @@
 @tailwind utilities;
 
 :root {
-  /*font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/
-  /*line-height: 1.5;*/
-  /*font-weight: 400;*/
-
-  //color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  //background-color: #071426;
-  //background-color: #0b213f;
   background-color: #fff;
 
   font-synthesis: none;
@@ -20,21 +13,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* .panelImage {
-  border-radius: 15px;
-}
-@media screen and (max-width: 660px) {
-  .panelImage {
-    object-fit: cover;
-  }
-}
-@media screen and (min-width: 661px) {
-  .panelImage {
-    object-fit: cover;
-    object-position: center;
-    height: 530px;
-  }
-} */
 .panelBackground {
   background-image: url("https://c1.wallpaperflare.com/preview/592/936/918/animals-dogs-cat-play.jpg");
   /* background-image: url("https://c1.wallpaperflare.com/preview/28/306/494/animals-dogs-puppies-dog-kennel.jpg"); */
@@ -49,16 +27,11 @@
 }
 
 .menu {
-  /* z-index: 2; */
   position: sticky; 
   margin-top: 45px;
   left: 45px;
   cursor: pointer;
 }
-
-/* .menu:hover {
-  cursor: pointer;
-} */
 
 .panelList {
   cursor: pointer;
@@ -69,7 +42,6 @@
 
 .panelList li:hover {
   color: #a5b4fc;
-  //color: #183462;
 }
 
 .mapImageContainer {
@@ -92,66 +64,16 @@
 
 @media screen and (max-width: 920px) {
   .animalsGrid {
-    /* display: flex;
-    flex-direction: column; */
     display: none;
-    /* grid-template-columns: 900px */
   }
 }
 
 .animalImage {
   overflow: hidden;
   background-position: center;
-  /* box-shadow: 8px 10px 5px #888888; */
 }
 .animalImage:hover {
   overflow: hidden;
   transition: transform 0.3s;
   transform: scale(1.05);
 }
-/* @media screen and (min-width: 1274px) {
- .menu {
-  7%;
- } 
-}
-
-@media screen and (min-width: 1388px) {
- .menu {
-  left: 100px;
- } 
-}
-@media screen and (min-width: 1395px) {
- .menu {
-  left: 120px;
- } 
-}
-
-@media screen and (min-width: 1447px) {
- .menu {
-  left: 150px;
- } 
-}
-
-@media screen and (min-width: 1495px) {
- .menu {
-  left: 180px;
- } 
-}
-
-@media screen and (min-width: 1560px) {
- .menu {
-  left: 200px;
- } 
-}
-
-@media screen and (min-width: 1600px) {
- .menu {
-  left: 210px;
- } 
-}
-
-@media screen and (min-width: 1625px) {
- .menu {
-  left: 18%;
- } 
-} */

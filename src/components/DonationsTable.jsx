@@ -27,8 +27,6 @@ const DonationsTable = ({title, data, executeDonation, removeDonation}) => {
           label={donateLabel}
           className="p-button p-component p-button-raised  p-button-help p-button-text"
           onClick={() => executeDonation(data, title)}
-        // onClick={() => donation(data)}
-
         />
       );
       const accept = (data) => (
@@ -36,7 +34,6 @@ const DonationsTable = ({title, data, executeDonation, removeDonation}) => {
           label="Accept donation"
           className="p-button p-component p-button-raised  p-button-warning p-button-text"
           onClick={() => executeDonation(data, title)}
-
         />
       );
       const repeat = (data) => (
@@ -44,7 +41,6 @@ const DonationsTable = ({title, data, executeDonation, removeDonation}) => {
           label="Repeat"
           className="p-button p-component p-button-raised  p-button-success p-button-text"
           onClick={() => executeDonation(data)}
-
         />
       );
   

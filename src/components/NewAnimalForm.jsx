@@ -9,7 +9,7 @@ import { Checkbox } from 'primereact/checkbox';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Calendar } from 'primereact/calendar';
 import { createAnimal } from '../utils/api'
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const NewAnimalForm = () => {
     const {user} = useContext(UserContext);
     const [animalTypes, setAnimalTypes] = useState([]);
@@ -28,7 +28,6 @@ const NewAnimalForm = () => {
 
     const onSubmit = (data) => {
         data.adopted = isAdopted;
-        console.log(isAdopted, data)
         createAnimal(data).then(() => navigate("/animals"))
         .catch(() => console.log(errors))
     }
@@ -133,8 +132,6 @@ const NewAnimalForm = () => {
                         onChange={() => setIsAdopted(!isAdopted)}
                         checked={isAdopted}
                       ></Checkbox>
-
-                      {/* <Checkbox checked={isAdopted} onChange={() => setIsAdopted(!isAdopted)} {...register("adopted")} name="adopted"></Checkbox> */}
                       <label style={{ color: "#666566" }}>Adopted</label>
                     </span>
                   </div>
@@ -149,9 +146,10 @@ const NewAnimalForm = () => {
                   </div>
                   <div>
                     <span className="p-float-label">
-                      <InputText 
+                      <InputText
                         name="image"
-                        {...register("image", {required: true})}/>
+                        {...register("image", { required: true })}
+                      />
                       <label>Image*</label>
                     </span>
                     {errors.image && (
@@ -162,7 +160,12 @@ const NewAnimalForm = () => {
                   </div>
                 </div>
               </div>
-              <Button type="submit" style={{width: "100%"}} label="Submit" className="p-button p-component p-button-raised p-button-help p-button-text" />
+              <Button
+                type="submit"
+                style={{ width: "100%" }}
+                label="Submit"
+                className="p-button p-component p-button-raised p-button-help p-button-text"
+              />
             </form>
           </div>
         )}

@@ -1,11 +1,10 @@
 import { Card } from 'primereact/card';
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { useForm,  } from 'react-hook-form';
 import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Button } from 'primereact/button';
 import { UserContext } from "../context/UserContext";
-// import { createDonation } from "../utils/api";
 const DonationForm = ({onCreateNew}) => {
     const {
         register,
@@ -22,15 +21,12 @@ const DonationForm = ({onCreateNew}) => {
         }
         data.donated = false;
         data.userDonation = !(user === "Admin");
-        console.log(data)
         onCreateNew(user === "Admin", data)
     }
 
     return (
       <div>
         <Card>
-          {/* <div className="flex justify-content-center">
-            <div className="card"> */}
           <h5 style={{ textAlign: "center", fontFamily: "cursive" }}>
             New Donation
           </h5>
@@ -54,7 +50,6 @@ const DonationForm = ({onCreateNew}) => {
               <span className="p-float-label">
                 <InputText
                   name="value"
-                  //   type="number"
                   {...register("value", { required: true })}
                 />
                 <label>Value*</label>
@@ -81,8 +76,6 @@ const DonationForm = ({onCreateNew}) => {
               className="mt-2 p-button-warning"
             />
           </form>
-          {/* </div>
-          </div> */}
         </Card>
       </div>
     );

@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useState, useEffect } from 'react'
-import {postComment, getComments} from '../utils/api'
+import {postComment} from '../utils/api'
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { InputTextarea } from 'primereact/inputtextarea';
@@ -13,19 +12,12 @@ const ContactForm = ({onNewComment}) => {
       formState: { errors },
     } = useForm();
 
-    // const [comments, setComments] = useState();
     const onSubmit = (data) => {
         postComment(data).then(() => {
           onNewComment(data);
           reset();
         });
     }
-
-    // useEffect(() => {
-    //     getComments().then(response => {
-    //         setComments(() => [...response.data])
-    //     })
-    // }, [])
 
     return (
       <form onSubmit={handleSubmit(onSubmit)}>

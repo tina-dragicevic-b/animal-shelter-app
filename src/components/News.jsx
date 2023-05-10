@@ -5,7 +5,6 @@ import { Card } from 'primereact/card';
 import { Button } from "primereact/button";
 import NewsForm from "./NewsForm";
 import { UserContext } from "../context/UserContext";
-import { Toast } from 'primereact/toast';
 import { ConfirmPopup } from 'primereact/confirmpopup';
 import { confirmPopup } from 'primereact/confirmpopup';
  
@@ -13,7 +12,7 @@ const News = () => {
   const { user } = useContext(UserContext);
   const [news, setNews] = useState([]);
   const [isNew, setIsNew] = useState(false);
-const [confirmDelete, setConfirmDelete] = useState(false);
+  const [confirmDelete, setConfirmDelete] = useState(false);
 
   useEffect(() => {
     getNews().then((response) => {
@@ -37,11 +36,6 @@ useEffect(() => {
 
   const footer = (id) => {
     return user === "Admin" ? (
-      //   <Button
-      //     label="Delete"
-      //     className="p-button p-component p-button-raised  p-button-danger p-button-text"
-      //     onClick={confirm}
-      //   />
       <button
         style={{
           borderRadius: "4px",
