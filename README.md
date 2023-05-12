@@ -32,6 +32,11 @@ Project uses Tailwind for component styling:
 npm install -D tailwindcss
 npx tailwindcss init
 ```
+Install PrimeReact: 
+
+```
+npm install primereact
+```
 
 Start the broject by running the command:
 
